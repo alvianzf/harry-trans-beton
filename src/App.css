@@ -1,0 +1,156 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.navbar {
+  box-sizing: border-box;
+  background-color: white;
+  position: sticky;
+  padding: 2rem 1rem 2rem 3rem;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  border: 0.5px solid lightgray;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 1rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.nav a:last-child {
+  margin-right: 0;
+  padding: 1rem 2rem;
+  background-color: orange;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.nav a:last-child:hover {
+  background-color: darkorange;
+  color: black;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+  margin-right: 1rem;
+}
+
+.nav a:hover {
+  color: orange;
+}
+
+.primary {
+  color: orange;
+}
+
+.secondary {
+  color: darkorange;
+}
+
+.success {
+  color: green;
+}
+
+.info {
+  color: lightskyblue;
+}
+
+.active {
+  color: orange;
+  font-weight: bold;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer-content .quick-links {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.quick-links a {
+  text-decoration: none;
+  color: lightblue; 
+  margin-left: 1rem;
+}
+
+.footer-logo {
+  margin-bottom: 2rem;
+  height: 50px;
+  width: 50px;
+}
+
+.footer-content {
+  width: 100%;
+  padding: 2rem;
+}
+
+.whatsapp-link {
+  background-color: lightgreen;
+  padding: 1rem 2rem 1rem 1rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.whatsapp-link:hover {
+  background-color: green;
+}
+
+.whatsapp-link i {
+  color: black;
+}
+
+.whatsapp-link a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .logo span {
+    display: none;
+  }
+}
