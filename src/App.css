@@ -81,14 +81,16 @@
 }
 
 .commitment-content {
-  text-align: center;
+  /* text-align: center; */
+  font-size: 1.5rem;
+  line-height: 1.5;
+  padding: 1rem;
 }
 
 .big-icon {
   font-size: 3rem;
   color: orange;
 }
-
 
 /* Navbar styles */
 .navbar {
@@ -102,6 +104,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 9999;
 }
 
 /* Logo styles */
