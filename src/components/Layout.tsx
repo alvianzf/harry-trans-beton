@@ -5,13 +5,12 @@ import Footer from "./Footer";
 interface LayoutProps {
   children: ReactNode;
   currentPage: string;
-  setPage: (page: string) => void;
 }
 
-function Layout({ children, currentPage, setPage }: LayoutProps) {
+function Layout({ children, currentPage }: LayoutProps) {
   return (
     <div>
-      <Navbar currentPage={currentPage} setPage={setPage} />
+      <Navbar currentPage={currentPage} />
       <div className="container">{children}</div>
       <Footer />
     </div>
