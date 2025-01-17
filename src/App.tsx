@@ -1,16 +1,16 @@
 import "./App.css";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
+import React from "react";
 
-function App() {
+const App: React.FC = () => {
+  const [currentPage, setPage] = React.useState<string>("Home");
 
   return (
-    <>
-     <Layout>
-      <Home />
-     </Layout>
-    </>
+    <Layout currentPage={currentPage} setPage={setPage}>
+      <Home setPage={setPage} />
+    </Layout>
   );
-}
+};
 
 export default App;

@@ -5,17 +5,17 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  --main-color: #0b439e;
+  --secondary-color: #0b6b9e;
 }
 
 /* Hero section styles */
 .hero {
-  background-color: orange;
+  background-color: var(--main-color);
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* height: 50vh; */
-  /* padding: 2rem; */
 }
 .hero-image-slider {
   position: relative;
@@ -67,7 +67,7 @@
 }
 
 .active-thumbnail {
-  border: 2px solid orange;
+  border: 2px solid var(--secondary-color);
 }
 
 /* Our Commitment Styles */
@@ -82,6 +82,7 @@
 
 .commitment-content {
   /* text-align: center; */
+  margin: 3rem 0;
   font-size: 1.5rem;
   line-height: 1.5;
   padding: 1rem;
@@ -89,7 +90,6 @@
 
 .big-icon {
   font-size: 3rem;
-  color: orange;
 }
 
 /* Navbar styles */
@@ -139,28 +139,28 @@
 .nav a:last-child {
   margin-right: 0;
   padding: 1rem 2rem;
-  background-color: orange;
+  background-color: var(--main-color);
   border-radius: 10px;
   color: white;
   font-weight: bold;
 }
 
 .nav a:last-child:hover {
-  background-color: darkorange;
+  background-color: var(--secondary-color);
   color: black;
 }
 
 .nav a:hover {
-  color: orange;
+  color: var(--main-color);
 }
 
 /* Utility classes for color themes */
 .primary {
-  color: orange;
+  color: var(--main-color);
 }
 
 .secondary {
-  color: darkorange;
+  color: var(--secondary-color);
 }
 
 .success {
@@ -172,8 +172,9 @@
 }
 
 .active {
-  color: orange;
+  color: var(--main-color) !important;
   font-weight: bold;
+  font-size: larger;
 }
 
 /* Footer styles */
@@ -182,10 +183,11 @@
   color: white;
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
+  padding: rem;
   width: 100%;
   position: relative;
   margin-top: auto;
+  bottom: 0;
 }
 
 .footer-content .quick-links {
@@ -237,6 +239,47 @@
   font-weight: bold;
   margin-left: 1rem;
 }
+
+.values-container {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+  justify-content: center;
+  padding: 2rem 20rem;
+  background-color: rgb(246, 246, 246);
+}
+
+.values-box {
+  display: flex;
+  justify-content: space-around;
+}
+
+.values-box-item-1 {
+  background-color: var(--main-color);
+  color: white;
+  padding: 4rem 3rem 3rem 3rem;
+  display: flex;
+  align-items: center;
+  min-height: 200px;
+  flex: 1;
+  flex-direction: column;
+  line-height: 1.5;
+  font-size: large;
+}
+
+.values-box-item-2 {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 4rem 3rem 3rem 3rem;
+  display: flex;
+  align-items: center;
+  min-width: 100px;
+  flex: 1;
+  flex-direction: column;
+  line-height: 1.5;
+  font-size: large;
+}
+
 
 /* Responsive styles */
 @media screen and (max-width: 768px) {

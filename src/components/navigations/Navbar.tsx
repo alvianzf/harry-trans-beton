@@ -1,23 +1,31 @@
-import logo from '../../assets/logo.png'
+import React, { useState } from 'react';
+import logo from '../../assets/logo.png';
 
-function Navbar() {
+interface NavbarProps {
+  currentPage: string;
+}
+const Navbar: React.FC<NavbarProps> = ({currentPage}) => {
+
+  const getClassName = (page: string) => (
+    currentPage === page ? 'nav-item active' : 'nav-item'
+  );
+
   return (
     <div className="navbar">
-        <div className="logo">
-            <img src={logo} alt="logo" />
-            <span>Harry Trans Beton</span>
-        </div>
+      <div className="logo">
+        <img src={logo} alt="logo" />
+        <span>Harry Trans Beton</span>
+      </div>
 
-        <div className="nav">
-            <a href="/">Home</a>
-            <a href="/about">About Us</a>
-            <a href="/services">Projects</a>
-            <a href="/services">Operations</a>
-            <a href="/contact">Contact Us</a>
-            <a href="/contact">Order Now</a>
-        </div>
+      <div className="nav">
+        <a className={getClassName("Home")} href="/">Home</a>
+        <a className={getClassName("about")} href="/about">About Us</a>
+        <a className={getClassName("services")} href="/servis">Projects</a>
+        <a className={getClassName("operations")} href="/operaons">Operations</a>
+        <a className={getClassName("contact")} href="/contact-us">Contact Us</a>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

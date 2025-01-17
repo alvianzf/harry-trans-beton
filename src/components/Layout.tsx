@@ -2,14 +2,16 @@ import { ReactNode } from "react";
 import Navbar from "./navigations/Navbar";
 import Footer from "./Footer";
 
-type LayoutProps = {
+interface LayoutProps {
   children: ReactNode;
-};
+  currentPage: string;
+  setPage: (page: string) => void;
+}
 
-function Layout({ children }: LayoutProps) {
+function Layout({ children, currentPage, setPage }: LayoutProps) {
   return (
     <div>
-      <Navbar />
+      <Navbar currentPage={currentPage} setPage={setPage} />
       <div className="container">{children}</div>
       <Footer />
     </div>
