@@ -7,7 +7,18 @@ import hki from '../../assets/images/clients/HKI.png'
 import transSumatera from '../../assets/images/clients/trans-sumatera.png'
 import imk from '../../assets/images/clients/imk.png'
 import pas from '../../assets/images/clients/pas.png'
-
+import harryTransBeton from '../../assets/logo.png'
+import comlec from '../../assets/images/clients/comlec.png'
+import dutaraya from '../../assets/images/clients/dutaraya.png'
+import wesaAntarNusa from '../../assets/images/clients/wesa-antar-nusa.png'
+import cgk from '../../assets/images/clients/cgk.png'
+import amadeoHotel from '../../assets/images/clients/amadeo-hotel.png'
+import pertagas from '../../assets/images/clients/pertagas.png'
+import bengkalis from '../../assets/images/clients/bengkalis.png'
+import dumai from '../../assets/images/clients/dumai.png'
+import riau from '../../assets/images/clients/riau.png'
+import eii from '../../assets/images/clients/EII.png'
+import multiKontrolNusantara from '../../assets/images/clients/multi-kontrol-nusantara.png'
 
 function Clients() {
   return (
@@ -22,6 +33,18 @@ function Clients() {
         <img src={transSumatera} alt="Trans Sumatera" />
         <img src={imk} alt="IMK" />
         <img src={pas} alt="PAS" />
+        <img src={harryTransBeton} alt="harry Trans Beton" />
+        <img src={comlec} alt="Comlec" />
+        <img src={dutaraya} alt="Dutaraya" />
+        <img src={wesaAntarNusa} alt="Wesa Antar Nusa" />
+        <img src={cgk} alt="CGK" />
+        <img src={amadeoHotel} alt="Amadeo Hotel" />
+        <img src={pertagas} alt="Pertagas" />
+        <img src={bengkalis} alt="Bengkalis" />
+        <img src={dumai} alt="Dumai" />
+        <img src={riau} alt="Riau" />
+        <img src={eii} alt="EII" />
+        <img src={multiKontrolNusantara} alt="Multi Kontrol Nusantara" />
     </div>
   )
 }
