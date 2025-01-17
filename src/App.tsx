@@ -7,7 +7,7 @@ const App: React.FC = () => {
   const [currentPage, setPage] = React.useState<string>("Home");
 
   return (
-    <Layout currentPage={currentPage} setPage={setPage}>
+    <Layout currentPage={currentPage}>
       <Home setPage={setPage} />
     </Layout>
   );
