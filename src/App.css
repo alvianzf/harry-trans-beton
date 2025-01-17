@@ -70,6 +70,25 @@
   border: 2px solid orange;
 }
 
+/* Our Commitment Styles */
+.our-commitment {
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+}
+
+.commitment-content {
+  text-align: center;
+}
+
+.big-icon {
+  font-size: 3rem;
+  color: orange;
+}
+
 
 /* Navbar styles */
 .navbar {
