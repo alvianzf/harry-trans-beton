@@ -40,9 +40,9 @@ function Clients() {
         <img src={cgk} alt="CGK" />
         <img src={amadeoHotel} alt="Amadeo Hotel" />
         <img src={pertagas} alt="Pertagas" />
+        <img src={riau} alt="Riau" />
         <img src={bengkalis} alt="Bengkalis" />
         <img src={dumai} alt="Dumai" />
-        <img src={riau} alt="Riau" />
         <img src={eii} alt="EII" />
         <img src={multiKontrolNusantara} alt="Multi Kontrol Nusantara" />
     </div>
