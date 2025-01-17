@@ -299,4 +299,22 @@
     flex-direction: column;
     align-items: center;
   }
+
+  .values-container {
+    padding: 0;
+  }
+
+  .values-box {
+    padding: auto;
+    flex-direction: column !important;
+  }
+
+  .values-box-item-1 {
+    width: 100%;
+    flex-direction: column;
+  }
+  .values-box-item-2 {
+    width: 100%;
+    flex-direction: column;
+  }
 }
