@@ -1,5 +1,3 @@
-import React from 'react'
-
 function Commitment() {
   return (
     <div className='our-commitment'>

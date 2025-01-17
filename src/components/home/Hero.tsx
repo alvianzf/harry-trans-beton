@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import image1 from '../../assets/images/hero/Concrete-Transformer-Foundation-and-Oil-Containment.jpg';
 import image2 from '../../assets/images/hero/Pondasi Bore Pile Petani Bangko.jpg';
 import image3 from '../../assets/images/hero/Pondasi Bore Pile Petani Menggala.jpg';
