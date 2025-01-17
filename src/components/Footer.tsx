@@ -14,7 +14,7 @@ function Footer() {
           Km.11 Air Kulim - Bathin Solapan - Bengkalis
         </p>
         <p>
-          <i className="fas fa-envelope info"></i> pt.harrytansbeton@gmail.com
+          <i className="fas fa-envelope info"></i> pt.harrytransbeton@gmail.com
         </p>
         <p>
           <i className="fas fa-phone info"></i>{" "}
