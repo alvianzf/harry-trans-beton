@@ -3,7 +3,7 @@ import React from 'react'
 const Contact: React.FC<PageProps> = ({ setPage }) => {
   return (
     React.useEffect(() => {
-        setPage('contact');
+        setPage('--');
         document.title = "Contact"
     }, [setPage]),
 
