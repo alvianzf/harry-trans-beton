@@ -43,8 +43,6 @@ function Footer() {
           Quick Links
           <a href="/">Home</a>
           <a href="/about">About Us</a>
-          <a href="/services">Projects</a>
-          <a href="/services">Operations</a>
           <a href="/contact">Contact Us</a>
           <WhatsappButton text={true} />
         </div>

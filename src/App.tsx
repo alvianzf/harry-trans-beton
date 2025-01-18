@@ -1,15 +1,26 @@
 import "./App.css";
 import Layout from "./components/Layout";
-import Home from "./pages/Home";
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import routes from "./routes"; // Import routes
 
 const App: React.FC = () => {
   const [currentPage, setPage] = React.useState<string>("Home");
 
   return (
-    <Layout currentPage={currentPage}>
-      <Home setPage={setPage} />
-    </Layout>
+    <Router>
+      <Layout currentPage={currentPage}>
+        <Routes>
+          {routes.map(({ path, component: Component, name }) => (
+            <Route
+              key={name}
+              path={path}
+              element={<Component setPage={setPage} />}
+            />
+          ))}
+        </Routes>
+      </Layout>
+    </Router>
   );
 };
 
