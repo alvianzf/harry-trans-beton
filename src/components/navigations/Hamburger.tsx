@@ -2,7 +2,7 @@ function WhatsappButton({ text }: { text: boolean }) {
     return (
       <div className="whatsapp-link">
         <a
-          href="https://wa.me/62812170459803"
+          href="https://wa.me/6282170459803"
           target="_blank"
           rel="noopener noreferrer"
         >
