@@ -4,14 +4,11 @@ import Hero from "../components/home/Hero";
 import Values from "../components/home/Values";
 import Clients from '../components/home/Clients';
 
-interface HomeProps {
-  setPage: (page: string) => void;
-}
-
-const Home: React.FC<HomeProps> = ({ setPage }) => {
+const Home: React.FC<PageProps> = ({ setPage }) => {
 
   React.useEffect(() => {
     setPage('Home');
+    document.title = 'Harry Trans Beton -- Beranda';
   }, [setPage]);
 
   return (

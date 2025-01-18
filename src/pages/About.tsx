@@ -1,7 +1,11 @@
-function About() {
-  return (
-    <div>About</div>
-  )
-}
+import React from "react";
 
-export default About
+const About: React.FC<PageProps> = ({setPage}) => {
+  React.useEffect(() => {
+    setPage("about");
+    document.title = "Tentang Kita -- Harry Trans Beton";
+  }, [setPage]);
+  return <div>About</div>;
+};
+
+export default About;
