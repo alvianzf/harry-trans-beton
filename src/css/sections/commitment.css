@@ -1,0 +1,21 @@
+/* Our Commitment Styles */
+.our-commitment {
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .commitment-content {
+    margin: 3rem 0;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding: 1rem;
+  }
+  
+  .big-icon {
+    font-size: 3rem;
+  }
+  
