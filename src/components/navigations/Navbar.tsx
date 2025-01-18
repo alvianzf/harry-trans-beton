@@ -15,10 +15,10 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage }) => {
 
   return (
     <div className="navbar">
-      <div className="logo">
+      <Link to="/" className="logo">
         <img src={logo} alt="logo" />
         <span>Harry Trans Beton</span>
-      </div>
+      </Link>
 
       <div className="nav">
         <Link className={getClassName("Home")} to="/">Home</Link>
