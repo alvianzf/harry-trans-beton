@@ -1,0 +1,55 @@
+/* Values container styles */
+.values-container {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+    justify-content: center;
+    padding: 2rem 20rem;
+    background-color: rgb(246, 246, 246);
+  }
+  
+  .values-box {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .values-box-item-1 {
+    background-color: var(--main-color);
+    color: white;
+    padding: 4rem 3rem 3rem 3rem;
+    display: flex;
+    align-items: center;
+    min-height: 200px;
+    flex: 1;
+    flex-direction: column;
+    line-height: 1.5;
+    font-size: large;
+  }
+  
+  .values-box-item-2 {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 4rem 3rem 3rem 3rem;
+    display: flex;
+    align-items: center;
+    min-width: 100px;
+    flex: 1;
+    flex-direction: column;
+    line-height: 1.5;
+    font-size: large;
+  }
+  
+  .clients {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+  }
+  
+  .clients img {
+    height: 50px;
+    object-fit: cover;
+    max-width: 100%;
+  }
+  
