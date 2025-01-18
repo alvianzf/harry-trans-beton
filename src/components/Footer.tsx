@@ -1,4 +1,5 @@
 import logo from "../assets/logo.png";
+import WhatsappButton from "./buttons/WhatsappButton";
 
 function Footer() {
   return (
@@ -28,7 +29,7 @@ function Footer() {
           Para ahli mencampurkan seluruh bahan material, semen, additive, dan
           air ke dalam wadah mixing untuk diolah secara bersamaan.
         </p>
-        <p style={{ marginTop: "1rem"}}>
+        <p style={{ marginTop: "1rem" }}>
           <i className="fas fa-truck info"></i> Mobile Plant
         </p>
         <p>
@@ -45,15 +46,7 @@ function Footer() {
           <a href="/services">Projects</a>
           <a href="/services">Operations</a>
           <a href="/contact">Contact Us</a>
-          <div className="whatsapp-link">
-            <a
-              href="https://wa.me/62812170459803"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-whatsapp info"></i> WhatsApp
-            </a>
-          </div>
+          <WhatsappButton text={true} />
         </div>
         © Copyright 2024 PT. Harry Trans Beton
       </div>
