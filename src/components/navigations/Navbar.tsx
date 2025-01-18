@@ -1,11 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png';
 import Hamburger from './Hamburger';
 
 interface NavbarProps {
   currentPage: string;
 }
-const Navbar: React.FC<NavbarProps> = ({currentPage}) => {
+
+const Navbar: React.FC<NavbarProps> = ({ currentPage }) => {
 
   const getClassName = (page: string) => (
     currentPage === page ? 'nav-item active' : 'nav-item'
@@ -19,12 +21,11 @@ const Navbar: React.FC<NavbarProps> = ({currentPage}) => {
       </div>
 
       <div className="nav">
-        <a className={getClassName("Home")} href="/">Home</a>
-        <a className={getClassName("about")} href="/about">About Us</a>
-        <a className={getClassName("contact")} href="/contact">Contact Us</a>
+        <Link className={getClassName("Home")} to="/">Home</Link>
+        <Link className={getClassName("about")} to="/about">About Us</Link>
+        <Link className={getClassName("contact")} to="/contact">Contact Us</Link>
       </div>
       <Hamburger />
-
     </div>
   );
 };
