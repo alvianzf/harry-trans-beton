@@ -409,3 +409,92 @@
     border-bottom: none;
   }
 }
+
+/* Preface component styles */
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.team-member {
+  background-color: white;
+  border: 2px solid var(--main-color);
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.team-member h2 {
+  color: var(--main-color);
+  margin-bottom: 0.5rem;
+}
+
+.team-member h3 {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.team-member p {
+  color: black;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Organizational chart styles */
+.team-member.komisaris {
+  background-color: #f1f8ff;
+  border-left: 5px solid #0b439e;
+}
+
+.team-member.direktur {
+  background-color: #e0f7fa;
+  border-left: 5px solid #0b6b9e;
+}
+
+.team-member['project-manager'] {
+  background-color: #e8f5e9;
+  border-left: 5px solid #388e3c;
+}
+
+/* Responsive styles for Preface component */
+@media screen and (max-width: 768px) {
+  .team {
+    padding: 1rem;
+  }
+
+  .team-member {
+    width: 100%;
+    max-width: none;
+  }
+
+  .team-member img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .team-member h2 {
+    font-size: 1.5rem;
+  }
+
+  .team-member h3 {
+    font-size: 1.2rem;
+  }
+
+  .team-member p {
+    font-size: 0.9rem;
+  }
+}
