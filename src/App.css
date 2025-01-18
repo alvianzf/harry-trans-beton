@@ -94,9 +94,11 @@
 
 /* Navbar styles */
 .navbar {
+  box-sizing: border-box;
   background-color: white;
   position: sticky;
   top: 0;
+  left: 0;
   width: 100%;
   padding: 2rem 1rem 2rem 3rem;
   display: flex;
@@ -105,6 +107,7 @@
   z-index: 9999;
 }
 
+/* Logo styles */
 .logo {
   font-size: 2rem;
   font-weight: bold;
@@ -182,14 +185,13 @@
   justify-content: space-between;
   padding: 2rem;
   width: 100%;
+  position: relative;
   margin-top: auto;
   bottom: 0;
 }
 
 .footer-content {
   line-height: 1.5;
-  width: 100%;
-  padding: 2rem;
 }
 
 .footer-content h3 {
@@ -217,6 +219,11 @@
   margin-bottom: 2rem;
   height: 50px;
   width: 50px;
+}
+
+.footer-content {
+  width: 100%;
+  padding: 2rem;
 }
 
 /* WhatsApp link styles */
@@ -259,24 +266,30 @@
   justify-content: space-around;
 }
 
-.values-box-item {
-  padding: 4rem 3rem;
+.values-box-item-1 {
+  background-color: var(--main-color);
+  color: white;
+  padding: 4rem 3rem 3rem 3rem;
   display: flex;
   align-items: center;
+  min-height: 200px;
   flex: 1;
   flex-direction: column;
   line-height: 1.5;
   font-size: large;
 }
 
-.values-box-item-1 {
-  background-color: var(--main-color);
-  color: white;
-}
-
 .values-box-item-2 {
   background-color: var(--secondary-color);
   color: white;
+  padding: 4rem 3rem 3rem 3rem;
+  display: flex;
+  align-items: center;
+  min-width: 100px;
+  flex: 1;
+  flex-direction: column;
+  line-height: 1.5;
+  font-size: large;
 }
 
 .clients {
@@ -285,6 +298,7 @@
   align-items: center;
   flex-wrap: wrap;
   padding: 2rem;
+  /* gap: 1rem; */
 }
 
 .clients img {
@@ -322,6 +336,13 @@
 
   .values-box {
     flex-direction: column;
+    padding: auto;
+  }
+
+  .values-box-item-1,
+  .values-box-item-2 {
+    width: 100%;
+    flex-direction: column;
   }
 
   .clients {
@@ -331,10 +352,12 @@
 
   .clients img {
     height: 40px;
+    flex: 0 0 30px;
   }
 
   .hamburger {
     display: block;
+    position: relative;
   }
 
   .logo img {
@@ -344,6 +367,10 @@
   .menu-icon {
     font-size: 24px;
     cursor: pointer;
+  }
+
+  .menu-icon i {
+    display: block;
   }
 
   .menu {
@@ -371,6 +398,7 @@
     text-decoration: none;
     color: black;
     display: block;
+    width: 100%;
     text-align: left;
   }
 
