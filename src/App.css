@@ -307,6 +307,10 @@
   max-width: 100%;
 }
 
+.hamburger {
+  display: none;
+}
+
 /* Responsive styles */
 @media screen and (max-width: 768px) {
   .desktop-only {
@@ -320,7 +324,7 @@
   .nav {
     display: none;
   }
-  
+
   .footer {
     flex-direction: column;
     align-items: center;
@@ -335,7 +339,8 @@
     padding: auto;
   }
 
-  .values-box-item-1, .values-box-item-2 {
+  .values-box-item-1,
+  .values-box-item-2 {
     width: 100%;
     flex-direction: column;
   }
@@ -348,5 +353,56 @@
   .clients img {
     height: 40px;
     flex: 0 0 30px;
+  }
+
+  .hamburger {
+    display: block;
+    position: relative;
+  }
+
+  .logo img {
+    width: 50px;
+  }
+
+  .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .menu-icon i {
+    display: block;
+  }
+
+  .menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+  }
+
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu ul li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .menu ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  .menu ul li:last-child {
+    border-bottom: none;
   }
 }

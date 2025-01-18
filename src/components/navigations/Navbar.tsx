@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../../assets/logo.png';
+import Hamburger from './Hamburger';
 
 interface NavbarProps {
   currentPage: string;
@@ -24,6 +25,8 @@ const Navbar: React.FC<NavbarProps> = ({currentPage}) => {
         <a className={getClassName("operations")} href="/operaons">Operations</a>
         <a className={getClassName("contact")} href="/contact-us">Contact Us</a>
       </div>
+
+      <Hamburger />
     </div>
   );
 };
