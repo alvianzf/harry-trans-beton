@@ -309,6 +309,10 @@
 
 /* Responsive styles */
 @media screen and (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+  
   .navbar {
     padding: 1rem;
   }
