@@ -38,9 +38,9 @@ function Hero() {
     );
   };
 
-  const handleThumbnailClick = (index: number) => {
-    setCurrentImageIndex(index);
-  };
+  // const handleThumbnailClick = (index: number) => {
+  //   setCurrentImageIndex(index);
+  // };
 
   return (
     <div className="hero">
@@ -52,7 +52,7 @@ function Hero() {
         <button className="prev-button" onClick={handlePrev}>‹</button>
         <button className="next-button" onClick={handleNext}>›</button>
       </div>
-      <div className="hero-thumbnails">
+      {/* <div className="hero-thumbnails">
         {images.map((image, index) => (
           <img 
             key={index}
@@ -62,7 +62,7 @@ function Hero() {
             className={index === currentImageIndex ? 'active-thumbnail' : ''}
           />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }
