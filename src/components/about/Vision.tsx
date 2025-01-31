@@ -4,7 +4,7 @@ const Vision: React.FC = () => {
     return (
         <div className="section-padding">
             <div className="container-width">
-                <h2 className="section-title">VISI & MISI</h2>
+                <h2 className="section-title">Visi & Misi</h2>
                 
                 <div className="content-wrapper">
                     <div>
