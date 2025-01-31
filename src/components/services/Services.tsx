@@ -3,7 +3,7 @@ import React from 'react';
 const Services: React.FC = () => {
     return (
         <div className="services">
-            <h2>Our Services</h2>
+            <h2 className='services-title'>Our Services</h2>
             <div className="services-content">
                 <div className="big-image">
                     <img src="/images/25.jpeg" alt="Main Service" />

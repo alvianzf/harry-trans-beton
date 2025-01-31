@@ -31,4 +31,8 @@
     font-weight: bold;
     font-size: larger;
   }
+
+  a {
+    text-decoration: none;
+  }
   

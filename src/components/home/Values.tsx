@@ -3,7 +3,7 @@ function Values() {
     <div className="values-container">
       <center style={{ margin: "3rem" }}>
         <i className="fas fa-wrench big-icon secondary"></i>
-        <h1>Nilai-Nilai Perusahaan</h1>
+        <h1 className="values-title">Nilai-Nilai Perusahaan</h1>
       </center>
       <div className="values-box">
         <div className="values-box-item-1">

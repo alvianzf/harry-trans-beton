@@ -31,7 +31,7 @@ const Preface: React.FC = () => {
   return (
     <div className="preface">
       <center>
-        <h1 className="team-title">Prakata</h1>
+        <h2 className="team-title">Prakata</h2>
       </center>
       <div className="team">
         {team.map((member, index) => (

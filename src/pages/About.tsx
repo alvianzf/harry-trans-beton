@@ -1,6 +1,7 @@
 import React from "react";
 import Preface from "../components/about/Preface";
 import Legality from "../components/about/Legality";
+import Vision from "../components/about/Vision";
 
 const About: React.FC<PageProps> = ({setPage}) => {
   React.useEffect(() => {
@@ -9,6 +10,7 @@ const About: React.FC<PageProps> = ({setPage}) => {
   }, [setPage]);
   return <div>
     <Preface />
+    <Vision />
     <Legality />
   </div>;
 };

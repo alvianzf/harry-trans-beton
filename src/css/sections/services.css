@@ -1,75 +1,89 @@
 .services {
-    padding: 30px;
-    text-align: center;
+  padding: 30px;
+  text-align: center;
 }
 
-.services h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
+.services-title {
+  color: var(--main-color);
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.services-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: var(--secondary-color);
 }
 
 .services-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .big-image img {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    margin-bottom: 30px;
-    padding: 2px;
-    border-radius: 10px;
-    border: 0.5px solid lightgray;
-    transition: all 0.3s ease;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin-bottom: 30px;
+  padding: 2px;
+  border-radius: 10px;
+  border: 0.5px solid lightgray;
+  transition: all 0.3s ease;
 }
 
 .big-image img:hover {
-    transform: translate(2px, -2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translate(2px, -2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .thumbnails {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
 .thumbnail {
-    text-align: center;
-    max-width: 300px;
-    flex: 1 1 250px;
+  text-align: center;
+  max-width: 300px;
+  flex: 1 1 250px;
 }
 
 .thumbnail img {
-    width: auto;
-    height: 400px;
-    border-radius: 10px;
-    padding: 2px;
-    margin-bottom: 15px;
-    border: 0.5px solid lightgray;
-    transition: all 0.3s ease;
+  width: auto;
+  height: 400px;
+  border-radius: 10px;
+  padding: 2px;
+  margin-bottom: 15px;
+  border: 0.5px solid lightgray;
+  transition: all 0.3s ease;
 }
 
 .thumbnail img:hover {
-    transform: translate(2px, -2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translate(2px, -2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .thumbnail p:first-of-type {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin: 0 0 10px 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0 0 10px 0;
 }
 
 .thumbnail p:last-of-type {
-    font-size: 0.9em;
-    line-height: 1.5;
-    color: #666;
-    margin: 0;
+  font-size: 0.9em;
+  line-height: 1.5;
+  color: #666;
+  margin: 0;
 }

@@ -7,6 +7,25 @@
     padding: 2rem 20rem;
     background-color: rgb(246, 246, 246);
   }
+
+  .values-title {
+    color: var(--main-color);
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+
+  .values-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: var(--secondary-color);
+  }
   
   .values-box {
     display: flex;

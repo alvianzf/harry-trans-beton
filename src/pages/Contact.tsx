@@ -1,4 +1,5 @@
 import React from 'react'
+import Contacts from '../components/contact/Contacts'
 
 const Contact: React.FC<PageProps> = ({ setPage }) => {
   return (
@@ -7,7 +8,9 @@ const Contact: React.FC<PageProps> = ({ setPage }) => {
         document.title = "Contact"
     }, [setPage]),
 
-    <div>Contact</div>
+    <div>
+      <Contacts />
+    </div>
   )
 }
 
