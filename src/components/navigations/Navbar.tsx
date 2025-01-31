@@ -23,6 +23,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage }) => {
       <div className="nav">
         <Link className={getClassName("Home")} to="/">Home</Link>
         <Link className={getClassName("about")} to="/about">About Us</Link>
+        <Link className={getClassName("services")} to="/services">Our Services</Link>
         <Link className={getClassName("contact")} to="/contact">Contact Us</Link>
       </div>
       <Hamburger />
