@@ -1,5 +1,5 @@
 import React from "react";
-import Services from "../components/about/Services"
+import Services from "../components/services/Services"
 
 const Service: React.FC<PageProps> = ({ setPage }) => {
 
