@@ -20,23 +20,7 @@ function Footer() {
         </p>
         <p>
           <i className="fas fa-phone info"></i>{" "}
-          <strong>0812170459803/082172260888</strong>
-        </p>
-        <h3>Our Plant</h3>
-        <p>
-          <i className="fas fa-industry info"></i> Wet Mix System Plant
-        </p>
-        <p>
-          Para ahli mencampurkan seluruh bahan material, semen, additive, dan
-          air ke dalam wadah mixing untuk diolah secara bersamaan.
-        </p>
-        <p style={{ marginTop: "1rem" }}>
-          <i className="fas fa-truck info"></i> Mobile Plant
-        </p>
-        <p>
-          Dikenal juga sebagai pabrik beton protable yang sangat handal karena
-          dapat dioperasikan di tempat atau lokasi proyek dan dapat
-          berpindah-pindah dari satu proyek ke proyek lainnya.
+          <strong>082170459803/082172260888</strong>
         </p>
       </div>
       <div className="footer-content">
