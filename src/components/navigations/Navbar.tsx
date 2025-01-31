@@ -24,6 +24,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage }) => {
         <Link className={getClassName("Home")} to="/">Home</Link>
         <Link className={getClassName("about")} to="/about">About Us</Link>
         <Link className={getClassName("services")} to="/services">Our Services</Link>
+        <Link className={getClassName("gallery")} to="/gallery">Gallery</Link>
         <Link className={getClassName("contact")} to="/contact">Contact Us</Link>
       </div>
       <Hamburger />

@@ -19,6 +19,7 @@ const Hamburger = () => {
             <li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/services">Our Services</a></li>
+            <li><a href="/gallery">Gallery</a></li>
             <li><a href="/contact">Contact</a></li>
             <li><WhatsappButton text={false} /></li>
           </ul>
