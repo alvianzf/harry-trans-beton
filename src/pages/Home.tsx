@@ -3,6 +3,7 @@ import Commitment from "../components/home/Commitment";
 import Hero from "../components/home/Hero";
 import Values from "../components/home/Values";
 import Clients from '../components/home/Clients';
+import Map from '../components/Map';
 
 const Home: React.FC<PageProps> = ({ setPage }) => {
 
@@ -17,6 +18,7 @@ const Home: React.FC<PageProps> = ({ setPage }) => {
       <Commitment />
       <Values />
       <Clients />
+      <Map />
     </div>
   );
 };

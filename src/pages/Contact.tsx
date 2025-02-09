@@ -1,5 +1,6 @@
 import React from 'react'
 import Contacts from '../components/contact/Contacts'
+import Map from '../components/Map';
 
 const Contact: React.FC<PageProps> = ({ setPage }) => {
   return (
@@ -10,6 +11,7 @@ const Contact: React.FC<PageProps> = ({ setPage }) => {
 
     <div>
       <Contacts />
+      <Map />
     </div>
   )
 }
