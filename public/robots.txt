@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://harry-trans-beton.vercel.app/sitemap.xml
+Sitemap: https://harrytransbeton.com/sitemap.xml
