@@ -7,6 +7,15 @@
   padding: 2rem;
 }
 
+/* Responsive grid for larger screens */
+@media (min-width: 768px) {
+  .team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+  }
+}
+
 .team-title {
   color: var(--main-color);
   text-align: center;
@@ -25,7 +34,7 @@
   height: 3px;
   background-color: var(--secondary-color);
 }
-  
+
 .team-member {
   background-color: white;
   border: 2px solid var(--main-color);
@@ -42,7 +51,7 @@
   transform: translate(5px, -5px);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
-  
+
 .team-member img {
   border-radius: 50%;
   padding: 2px;
@@ -57,37 +66,80 @@
 }
 
 .team-member img:hover {
-  transform: scale(2);
+  transform: scale(1.5);
 }
-  
-.team-member h2 {
-  color: var(--main-color);
-  margin-bottom: 0.5rem;
+
+/* Prevent layout shift on hover */
+.team-member img-container {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
 }
-  
-.team-member h3 {
-  color: var(--secondary-color);
-  margin-bottom: 1rem;
+
+/* Ensure smooth loading */
+.image-placeholder {
+  width: 100px;
+  height: 100px;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  font-size: 14px;
+  border-radius: 50%;
 }
-  
-.team-member p {
-  color: black;
-  font-size: 1rem;
-  line-height: 1.5;
+
+.team-member .image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto; /* Centers the container */
 }
-  
+
+.team-photo.loading {
+  display: none;
+}
+
+.team-photo.loaded {
+  display: block;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
 /* Organizational chart styles */
 .team-member.komisaris {
   background-color: #f1f8ff;
   border-left: 5px solid #0b439e;
 }
-  
+
 .team-member.direktur {
   background-color: #e0f7fa;
   border-left: 5px solid #0b6b9e;
 }
-  
-.team-member['project-manager'] {
+
+.team-member.project-manager {
   background-color: #e8f5e9;
   border-left: 5px solid #388e3c;
+}
+
+/* Improve text readability */
+.team-member h2 {
+  color: var(--main-color);
+  margin-bottom: 0.5rem;
+}
+
+.team-member h3 {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.team-member p {
+  color: black;
+  font-size: 1rem;
+  line-height: 1.5;
 }

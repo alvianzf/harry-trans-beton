@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import commissioner from "../../assets/images/org/commissioner.png";
 import director from "../../assets/images/org/director.png";
 import projectManager from "../../assets/images/org/project-manager.png";
 
+interface TeamMemberProps {
+  role: string;
+  name: string;
+  photo: string;
+  preface: string;
+}
+
 const Preface: React.FC = () => {
-  const team = [
+  const team: TeamMemberProps[] = [
     {
       role: "Komisaris",
       name: "Lili Nadia",
@@ -35,23 +42,33 @@ const Preface: React.FC = () => {
       </center>
       <div className="team">
         {team.map((member, index) => (
-          <div
-            key={index}
-            className={`team-member ${member.role
-              .toLowerCase()
-              .replace(" ", "-")}`}
-          >
-            <img
-              src={member.photo}
-              alt={`${member.role} photo`}
-              className="team-photo"
-            />
-            <h2 className="team-name">{member.name}</h2>
-            <h3 className="team-role">{member.role}</h3>
-            <p className="team-preface">{member.preface}</p>
-          </div>
+          <TeamMember key={index} member={member} />
         ))}
       </div>
+    </div>
+  );
+};
+
+const TeamMember: React.FC<{ member: TeamMemberProps }> = ({ member }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  return (
+    <div
+      className={`team-member ${member.role.toLowerCase().replace(" ", "-")}`}
+    >
+      <div className="image-container">
+        {!isLoaded && <div className="image-placeholder">Loading...</div>}
+        <img
+          src={member.photo}
+          alt={`${member.role} photo`}
+          className={`team-photo ${isLoaded ? "loaded" : "loading"}`}
+          onLoad={() => setIsLoaded(true)}
+          style={{ display: isLoaded ? "block" : "none" }}
+        />
+      </div>
+      <h2 className="team-name">{member.name}</h2>
+      <h3 className="team-role">{member.role}</h3>
+      <p className="team-preface">{member.preface}</p>
     </div>
   );
 };
