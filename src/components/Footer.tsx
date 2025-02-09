@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import logo from "../assets/logo.png";
 import WhatsappButton from "./buttons/WhatsappButton";
-import Map from './Map';
 
 function Footer() {
   return (
