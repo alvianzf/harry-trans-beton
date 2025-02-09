@@ -1,54 +1,44 @@
-import React from 'react';
+import React from "react";
 
 const Vision: React.FC = () => {
     return (
-        <div className="section-padding">
-            <div className="container-width">
-                <h2 className="section-title">Visi & Misi</h2>
-                
-                <div className="content-wrapper">
-                    <div>
-                        <h3 className="subsection-title">Visi</h3>
-                        <p className="text-content">
-                            Menjadi perusahaan Batching Plant pilihan dan terpercaya yang berintegritas, selalu berinovasi dan berkomitmen untuk memusatkan pelayanan pada kepuasan customer.
+        <section className="vision-section">
+            <div className="vision-container">
+                <div className="vision-header">
+                    <h2 className="vision-title">Visi & Misi</h2>
+                </div>
+
+                <div className="vision-content">
+                    {/* Vision Section */}
+                    <div className="vision-box">
+                        <h3 className="vision-subtitle">Visi</h3>
+                        <p className="vision-text">
+                            Menjadi perusahaan Batching Plant pilihan dan terpercaya yang
+                            berintegritas, selalu berinovasi dan berkomitmen untuk
+                            memusatkan pelayanan pada kepuasan customer.
                         </p>
                     </div>
 
-                    <div>
-                        <h3 className="subsection-title">Misi</h3>
-                        <div className="mission-list">
-                            <div className="mission-item">
-                                <span className="mission-number">01</span>
-                                <p className="text-content">
-                                    Ikut serta mensukseskan proyek Nasional melalui pembangunan dan pemberdayaan daerah dengan berkontribusi menciptakan lapangan kerja untuk masyarakat sekitar lokasi.
-                                </p>
-                            </div>
-
-                            <div className="mission-item">
-                                <span className="mission-number">02</span>
-                                <p className="text-content">
-                                    Berkomitmen menyediakan solusi jasa Batching Plant yang handal, tepat waktu, tepat biaya dengan hasil yang berkualitas, dengan mengutamakan keselamatan kerja.
-                                </p>
-                            </div>
-
-                            <div className="mission-item">
-                                <span className="mission-number">03</span>
-                                <p className="text-content">
-                                    Memberikan pelayanan terbaik kepada customer, serta mempertahankan tingkat profesionalisme dan kejujuran dalam hubungan kami dengan customer dan karyawan.
-                                </p>
-                            </div>
-
-                            <div className="mission-item">
-                                <span className="mission-number">04</span>
-                                <p className="text-content">
-                                    Memelihara hubungan baik dengan para pelanggan karena kami bertanggung jawab terhadap layanan yang kami jual.
-                                </p>
-                            </div>
-                        </div>
+                    {/* Mission Section */}
+                    <div className="vision-box">
+                        <h3 className="vision-subtitle">Misi</h3>
+                        <ul className="vision-list">
+                            {[
+                                "Ikut serta mensukseskan proyek Nasional melalui pembangunan dan pemberdayaan daerah dengan berkontribusi menciptakan lapangan kerja untuk masyarakat sekitar lokasi.",
+                                "Berkomitmen menyediakan solusi jasa Batching Plant yang handal, tepat waktu, tepat biaya dengan hasil yang berkualitas, dengan mengutamakan keselamatan kerja.",
+                                "Memberikan pelayanan terbaik kepada customer, serta mempertahankan tingkat profesionalisme dan kejujuran dalam hubungan kami dengan customer dan karyawan.",
+                                "Memelihara hubungan baik dengan para pelanggan karena kami bertanggung jawab terhadap layanan yang kami jual.",
+                            ].map((text, index) => (
+                                <li className="vision-item" key={index}>
+                                    <span className="vision-number">{index + 1}</span>
+                                    <p className="vision-text">{text}</p>
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

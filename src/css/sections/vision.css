@@ -1,71 +1,112 @@
-.section-padding {
-  padding: 80px 0;
+/* Define Color Variables */
+:root {
+  --main-color: #0057a3; /* Primary accent */
+  --secondary-color: #f4a261; /* Secondary accent */
+  --text-color: #333;
 }
 
-.container-width {
-  max-width: 900px;
+/* General Styling */
+.vision-section {
+  padding: 60px 20px;
+  font-family: "Arial", sans-serif;
+  color: var(--text-color);
+}
+
+.vision-container {
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
-.section-title {
+/* Section Title */
+.vision-header {
   text-align: center;
-  color: var(--main-color);
+  margin-bottom: 40px;
+}
+
+.vision-title {
   font-size: 2.5rem;
-  margin-bottom: 50px;
-}
-
-.content-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-}
-
-.subsection-title {
-  color: var(--secondary-color);
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-}
-
-.text-content {
-  line-height: 1.6;
-  color: #333;
-}
-
-.mission-list {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.mission-item {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-}
-
-.mission-number {
-  font-size: 2rem;
   font-weight: bold;
   color: var(--main-color);
-  min-width: 45px;
 }
 
-@media (max-width: 768px) {
-  .section-padding {
-    padding: 60px 0;
+/* Content Layout */
+.vision-content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* Vision & Mission Content */
+.vision-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Subsection Titles */
+.vision-subtitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--main-color);
+  margin-bottom: 10px;
+}
+
+/* Mission List */
+.vision-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+/* Mission Items */
+.vision-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 15px 20px;
+  border-left: 5px solid var(--secondary-color);
+  background: #f9f9f9;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.vision-item:hover {
+  background: var(--secondary-color);
+  color: white;
+}
+
+.vision-number {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--main-color);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Text Styling */
+.vision-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.vision-text:hover {
+  color: white;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .vision-content {
+      flex-direction: row;
+      justify-content: space-between;
   }
 
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .subsection-title {
-    font-size: 1.5rem;
-  }
-
-  .mission-number {
-    font-size: 1.5rem;
-    min-width: 35px;
+  .vision-box {
+      width: 48%;
   }
 }
