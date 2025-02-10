@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
 import { Loader } from "@googlemaps/js-api-loader";
 
 interface MapProps {
@@ -6,46 +6,49 @@ interface MapProps {
   height?: string;
 }
 
-const Map: React.FC<MapProps> = ({
-  apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
-  height = "400px",
-}) => {
+const loaderInstance = new Loader({
+  apiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY || "",
+  version: "weekly",
+});
+
+const Map: React.FC<MapProps> = ({ apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY, height = "400px" }) => {
   const mapRef = useRef<HTMLDivElement>(null);
+  const [googleMaps, setGoogleMaps] = useState<typeof google | null>(null);
+
+  const position = useMemo(() => ({ lat: 1.35935, lng: 101.13447 }), []);
 
   useEffect(() => {
-    const initMap = async () => {
-      const loader = new Loader({
-        apiKey: apiKey || "",
-        version: "weekly",
+    if (!googleMaps) {
+      loaderInstance.load().then((google) => {
+        setGoogleMaps(google);
       });
+    }
+  }, [googleMaps]);
 
-      const google = await loader.load();
-      const position = { lat: 1.35935, lng: 101.13447 };
-
-      const map = new google.maps.Map(mapRef.current!, {
+  useEffect(() => {
+    if (googleMaps && mapRef.current) {
+      const map = new googleMaps.maps.Map(mapRef.current, {
         center: position,
         zoom: 15,
         mapTypeId: "roadmap",
       });
 
-      new google.maps.Marker({
+      new googleMaps.maps.Marker({
         position,
         map,
         title: "Harrytrans Beton",
       });
-    };
-
-    initMap();
-  }, [apiKey]);
+    }
+  }, [googleMaps, position]);
 
   return (
-    <div style={{marginTop: '4rem'}}>
-      <h1 className='title'>Lokasi</h1>
+    <div style={{ marginTop: "4rem" }}>
+      <h1 className="title">Lokasi</h1>
       <div
         ref={mapRef}
         style={{
           width: "100%",
-          height
+          height,
         }}
       />
     </div>
